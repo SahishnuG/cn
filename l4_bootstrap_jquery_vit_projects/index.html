@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIT — SDP / EDI / DT / Course Projects (Tabs)</title>
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#1e7ad3;
+      --muted:#6c757d;
+    }
+    body{ font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#fafafa; }
+    .site-hero{
+      background: linear-gradient(180deg, #ffffff 0%, #f3f7fb 100%);
+      padding: 48px 0 32px;
+      border-bottom: 1px solid #e9eef6;
+    }
+    .brand-title{ font-weight:700; color:var(--accent); }
+    .subtitle{ color:var(--muted); margin-top:8px; }
+    .profile-img{
+      max-width:100%;
+      border-radius:6px;
+      box-shadow: 0 6px 18px rgba(34, 60, 80, 0.08);
+      border:6px solid #fff;
+    }
+    .nav-pills .nav-link.active { background: var(--accent); color: #fff; }
+    .card-project { min-height: 120px; }
+    .section-footer{
+      margin-top:40px;
+      padding:18px;
+      text-align:center;
+      color:var(--muted);
+      border-top:1px dashed #e6edf6;
+      background: transparent;
+    }
+    /* small helper for placeholder */
+    .placeholder-box { background: linear-gradient(90deg,#f6f8fb,#fff); border:1px dashed #e6edf6; padding:12px; border-radius:6px; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO / HEADER -->
+  <header class="site-hero">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-7">
+          <h1 class="brand-title">Develop a website using toggleable / dynamic tabs / pills</h1>
+          <p class="subtitle">Relevance of SDP, EDI, DT and Course Projects in VIT</p>
+        </div>
+
+        <div class="col-md-5 text-md-end">
+          <!-- Example profile image / institution logo 
+          <img alt="profile" class="profile-img" style="max-width:240px;" src="D:\Sahishnu\VIT\TY\Sem 5\CN\Lab\Labs\l4_bootstrap_jquery_vit_projects\VIT-Pune-Logo.png"> -->
+          <!-- To use your uploaded image, uncomment and edit the line below: -->
+               <img class="profile-img" src="VIT-Pune-Logo.png" alt="sample">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+
+      <!-- Title + Pills -->
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h3 class="mb-2">Project Overview</h3>
+          <p class="text-muted">Use the tabs below to explore each program area. Click or switch with keyboard — everything is accessible.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 mb-4">
+          <!-- Left column: About + Nav pills -->
+          <div class="sticky-top" style="top:20px;">
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Quick Info</h5>
+                <p class="card-text small text-muted">
+                    TY Student in VIT Pune who is interested in AIML and CNT.
+                </p>
+
+                <div class="placeholder-box mb-2">
+                  <strong>Name:</strong> <span id="ph-name">Sahishnu G</span><br>
+                  <strong>Dept:</strong> <span id="ph-dept">CSE (AIML)</span><br>
+                  <strong>Batch:</strong> <span id="ph-batch">2027</span>
+                </div>
+
+                <!-- Nav pills -->
+                <ul class="nav nav-pills flex-column" id="mainTabs" role="tablist" aria-orientation="vertical">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="tab-sdp" data-bs-toggle="pill" data-bs-target="#pane-sdp" type="button" role="tab">SDP</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-edi" data-bs-toggle="pill" data-bs-target="#pane-edi" type="button" role="tab">EDI</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-dt" data-bs-toggle="pill" data-bs-target="#pane-dt" type="button" role="tab">DT</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-course" data-bs-toggle="pill" data-bs-target="#pane-course" type="button" role="tab">Course Projects</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Small legend / usage -->
+            <div class="card shadow-sm">
+              <div class="card-body small text-muted">
+                <strong>Tip:</strong> Use the tabs to navigate through different sections. Double-click on the placeholders in the "Quick Info" box to edit your details inline.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          <!-- Right column: Tab content panes -->
+          <div class="tab-content">
+
+            <!-- SDP Pane -->
+            <div class="tab-pane fade show active" id="pane-sdp" role="tabpanel">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <h4>SDP (Software Development Project)</h4>
+                  <p class="text-muted mb-0">Summary and relevance of SDP to the program and industry.</p>
+                </div>
+                <div><span class="badge bg-primary">Recommended: Capstone</span></div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-5">
+                  <div class="card card-body">
+                    <h6 class="mb-2">Project Snapshot</h6>
+                    <p class="small text-muted">Replace with a brief description of the SDP you want to highlight.</p>
+                    <ul>
+                      <li><strong>Title:</strong> <span class="placeholder">Project title here</span></li>
+                      <li><strong>Tools:</strong> <span class="placeholder">C++, Python, Web</span></li>
+                      <li><strong>Duration:</strong> <span class="placeholder">6 months</span></li>
+                    </ul>
+                    <!-- small image -->
+                    <img alt="sdp-sample" class="img-fluid mt-2" src="https://via.placeholder.com/400x180.png?text=SDP+Image">
+                  </div>
+                </div>
+
+                <div class="col-md-7">
+                  <div class="card card-body">
+                    <h6>Learning Outcomes</h6>
+                    <ol>
+                      <li>Requirement analysis & design</li>
+                      <li>Team collaboration & version control</li>
+                      <li>Deployment & testing</li>
+                    </ol>
+                    <p class="small text-muted">Explain how SDP maps to industry skills, internships, and employability.</p>
+                  </div>
+
+                  <div class="mt-3">
+                    <h6>How SDP relates to EDI / DT</h6>
+                    <p class="small text-muted">Short cross references — e.g., "SDP used Design Thinking for UX" — fill in your specifics.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EDI Pane -->
+            <div class="tab-pane fade" id="pane-edi" role="tabpanel">
+              <h4>EDI (Engineering Design & Innovation)</h4>
+              <p class="text-muted">Explain EDI's purpose and examples from VIT.</p>
+
+              <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                  <div class="card card-body card-project">
+                    <h6>Design Example 1</h6>
+                    <p class="small text-muted">Short description placeholder.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card card-body card-project">
+                    <h6>Design Example 2</h6>
+                    <p class="small text-muted">Short description placeholder.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <h6>Skills Gained</h6>
+                <ul>
+                  <li>Problem framing</li>
+                  <li>Rapid prototyping</li>
+                  <li>Validation with users</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- DT Pane -->
+            <div class="tab-pane fade" id="pane-dt" role="tabpanel">
+              <h4>Design Thinking (DT)</h4>
+              <p class="text-muted">Describe DT projects, methods, and outcomes.</p>
+
+              <div class="row mt-3">
+                <div class="col-md-7">
+                  <h6>Projects done in last 5 semesters</h6>
+                  <ol>
+                    <li>Tyre pressure monitoring and picture detecting system</li>
+                    <li>System for reminders communication</li>
+                    <li>Decentralized anticontour platform</li>
+                    <li>Spam mail detection using blockchain</li>
+                    <li>AI Legal Advisor</li>
+                    <li>Decentralized Music Platform (NFT Royalties)</li>
+                    <li>Facial-expression based music player</li>
+                  </ol>
+                </div>
+                <div class="col-md-5">
+                  <div class="placeholder-box">
+                    <strong>Tip:</strong> Replace these sample items with the actual projects and short descriptions. Link to reports or repos if available.
+                    <!-- If you have a screenshot you want to include, replace the image src below:
+                         <img src="/mnt/data/30333bcf-4654-4375-8036-624576bb0c46.png" class="img-fluid mt-2" alt="DT sample"> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Projects Pane -->
+            <div class="tab-pane fade" id="pane-course" role="tabpanel">
+              <h4>Course Projects</h4>
+              <p class="text-muted">List and explain course-related projects and how they reinforce SDP / EDI / DT.</p>
+
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <div class="card card-body">
+                    <h6>Course Project A</h6>
+                    <p class="small text-muted">Short description — problem, approach, outcome.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card card-body">
+                    <h6>Course Project B</h6>
+                    <p class="small text-muted">Short description — problem, approach, outcome.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <h6>Mapping to Learning Outcomes</h6>
+                <p class="small text-muted">Indicate which course outcomes map to SDP/EDI/DT skills — e.g., "Design, Analysis, Experimentation".</p>
+              </div>
+            </div>
+
+          </div> <!-- tab content end -->
+
+          <!-- Section footer -->
+          <div class="section-footer">
+            <div class="container">
+              <p class="mb-1">Vision — To be a globally acclaimed Institute in Technical Education and Research for holistic Socio-economic development</p>
+              
+          </div>
+
+        </div> <!-- right col end -->
+      </div> <!-- row end -->
+
+    </div>
+  </main>
+
+  <footer class="py-4 text-center text-muted">
+    © <span id="year"></span> VIT — WT Lab Assignment · Replace with your details
+  </footer>
+
+  <!-- jQuery (for small dynamic extras) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap JS (requires Popper, included in bundle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Small UX helpers
+    $(function(){
+      // fill year
+      $('#year').text(new Date().getFullYear());
+
+      // Remember last active tab in localStorage
+      const tabEls = document.querySelectorAll('#mainTabs button[data-bs-toggle="pill"]');
+      const stored = localStorage.getItem('lastTab');
+      if(stored){
+        const btn = document.querySelector('#mainTabs button[id="' + stored + '"]');
+        if(btn){
+          const bs = bootstrap.Tab.getInstance(btn) || new bootstrap.Tab(btn);
+          bs.show();
+        }
+      }
+
+      $('#mainTabs button[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
+        localStorage.setItem('lastTab', e.target.id); // e.target is the triggered tab
+      });
+
+      // Example: click a button elsewhere to navigate to a tab
+      // $("#go-to-dt").on('click', function(){ $('#tab-dt').click(); });
+
+      // Small demo: allow editing the quick-info placeholders inline (double-click)
+      $('#ph-name, #ph-dept, #ph-batch').on('dblclick', function(){
+        const cur = $(this).text();
+        const input = $('<input class="form-control form-control-sm" />').val(cur);
+        $(this).replaceWith(input);
+        input.focus();
+        input.on('blur keydown', function(e){
+          if(e.type === 'blur' || (e.type === 'keydown' && e.key === 'Enter')){
+            const val = $(this).val() || '—';
+            const span = $('<span>').attr('id', $(this).attr('id') || '').text(val);
+            $(this).replaceWith(span);
+            // rebind dblclick
+            span.on('dblclick', function(){ $(this).dblclick(); });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

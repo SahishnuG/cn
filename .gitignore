@@ -1,0 +1,74 @@
+# -----------------------------
+# Global ignores for all labs
+# -----------------------------
+
+# Node modules (React + server)
+node_modules/
+*/node_modules/
+**/node_modules/
+
+# Build outputs (React / Node)
+build/
+dist/
+*/build/
+*/dist/
+
+# Production bundles
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+*.env
+.env.local
+.env.*.local
+
+# Cache folders
+.cache/
+*/.cache/
+.parcel-cache/
+.vite/
+.next/
+out/
+
+# React specific
+# (CRA generates these)
+.DS_Store
+*.tmp
+*.temp
+.idea/
+.vscode/
+
+# Testing
+coverage/
+*.lcov
+
+# System files
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*.swo
+
+# Node server dependencies
+server/node_modules/
+
+# Build artifacts inside labs
+l5_marksheet_generator/frontend/node_modules/
+l5_marksheet_generator/frontend/build/
+l5_marksheet_generator/server/node_modules/
+
+# Logs
+logs/
+server.log
+*.log
+
+# Optional: prevent accidentally committing MySQL dumps
+*.sql~
+*.db
+
+# Ignore local environment configuration
+/l5_marksheet_generator/server/.env
+/l5_marksheet_generator/frontend/.env
