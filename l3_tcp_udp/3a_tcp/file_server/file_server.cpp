@@ -146,6 +146,3 @@ int main(int argc, char** argv) {
     WSACleanup();
     return 0;
 }
-
-// GET to download a file from server
-// PUT to upload a file to server
