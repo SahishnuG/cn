@@ -3,7 +3,7 @@
 //   file_client_win <server> <port> GET <filename>
 //   file_client_win <server> <port> PUT <filename>
 // Compile (MSVC): cl /EHsc file_client_win.cpp ws2_32.lib
-// Compile (MinGW): g++ -std=c++17 file_client_win.cpp -lws2_32 -o file_client_win.exe
+// Compile (MinGW): g++ file_client.cpp -lws2_32 -o file_client.exe
 
 #include <winsock2.h>
 #include <ws2tcpip.h>

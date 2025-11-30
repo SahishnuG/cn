@@ -1,7 +1,7 @@
 // hello_server_win.cpp
 // Usage: hello_server_win <port>
 // Compile (MSVC): cl /EHsc hello_server_win.cpp ws2_32.lib
-// Compile (MinGW): g++ -std=c++17 hello_server_win.cpp -lws2_32 -o hello_server_win.exe
+// Compile (MinGW): g++ hello_server.cpp -lws2_32 -o hello_server.exe
 
 #include <winsock2.h>
 #include <ws2tcpip.h>

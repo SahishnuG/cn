@@ -1,7 +1,7 @@
 // hello_client_win.cpp
 // Usage: hello_client_win <server_ip_or_hostname> <port>
 // Compile (MSVC): cl /EHsc hello_client_win.cpp ws2_32.lib
-// Compile (MinGW): g++ -std=c++17 hello_client_win.cpp -lws2_32 -o hello_client_win.exe
+// Compile (MinGW): g++ hello_client.cpp -lws2_32 -o hello_client.exe
 
 #include <winsock2.h>
 #include <ws2tcpip.h>

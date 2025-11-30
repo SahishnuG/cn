@@ -1,7 +1,7 @@
 // file_server_win.cpp
 // Usage: file_server_win <port>
 // Compile (MSVC): cl /EHsc file_server_win.cpp ws2_32.lib
-// Compile (MinGW): g++ -std=c++17 file_server_win.cpp -lws2_32 -o file_server_win.exe
+// Compile (MinGW): g++ file_server.cpp -lws2_32 -o file_server.exe
 
 #include <winsock2.h>
 #include <ws2tcpip.h>
@@ -146,3 +146,6 @@ int main(int argc, char** argv) {
     WSACleanup();
     return 0;
 }
+
+// GET to download a file from server
+// PUT to upload a file to server
