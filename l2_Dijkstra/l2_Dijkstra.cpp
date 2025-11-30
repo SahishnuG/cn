@@ -4,7 +4,6 @@
 #include <utility>
 #include <algorithm>
 
-
 using namespace std;
 using ll = long long;
 const ll INF = (1LL<<60);
@@ -94,3 +93,5 @@ int main() {
 
     return 0;
 }
+
+//for routing table, consider each node as source in turn and store next hop for each destination
